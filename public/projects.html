@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="AB-logo_neww.png">
+    <title>projects</title>
+
+    <style>
+        body {
+            color: rgb(70 163 198);
+            background-color: rgb(5, 8, 22);
+        }
+
+        #navbarNavAltMarkup.collapse.navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-nav a {
+            color: black;
+
+        }
+
+        a.nav-link {
+            margin: 10px;
+            padding: 10px;
+            transition: border-bottom 0.5s;
+            color: rgb(170 166 195);
+            border-bottom: 2px solid transparent;
+        }
+
+        a.nav-link:hover {
+          color: rgb(238, 238, 238);
+
+            border-bottom: 2px solid rgb(238, 238, 238);
+
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: 88vh;
+            align-items: center;
+        }
+
+        
+
+        .p1 {
+            padding: 1rem;
+            margin: 20px 0px;
+            height: 63vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            width: 23rem;
+            border: 3px;
+            border-radius: 20px;
+            background-color:  rgb(21 16 48);
+            transition: transform 0.3s;
+        }
+        .p1:hover {
+    transform: scale(1.1); /* Added for 3D hover effect */
+}
+        .p1 img{
+            border: 10px;
+    /* margin: 10px 30px; */
+    border-radius: 19px;
+        }
+        .p1 p{
+            color: rgb(170 166 195);
+    font-size: 14px;
+    text-align: left;
+    margin:0px 20px;
+    font-family: Poppins,sans-serif;
+        }
+        .p1 h2{
+            color:rgb(238, 238, 238);
+        }
+        .view{
+            display: flex;
+            justify-content: end;
+        }
+        .view a{
+            font-size: 30px;
+            /* margin:  0px 10px; */
+            color: rgb(170 166 195);;
+            padding:  0px 10px;
+        }
+        a.navbar-brand{
+        color:rgb(238, 238, 238);
+        }
+        .navbar-toggler{
+            background-color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" href="/skills">Skills</a>
+                    <a class="nav-link" href="/projects">Projects</a>
+                    <a class="nav-link" href="/contact">Contact me</a>
+                    <a class="nav-link" href="resume.pdf" target="_blank">My resume</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="projects">
+        <div class="p1">
+            <div class="view"><a href="https://easy-veil-goat.cyclic.cloud/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+            <a href="https://github.com/AmitBhramanna011/To-do_list.git" target="_blank"><i class="bi bi-github"></i></a></div>
+            <img src="to-do.png" alt="">
+            <h2>To-Do List</h2>
+            <p>The Todo List App is a user-friendly task management application ,this app allows users to add, and delete tasks. Key features include priority settings, due dates, and a responsive design for seamless usability across devices.</p>
+        </div>
+        <div class="p1">
+            <div class="view"> <a href="https://suggest-flick.onrender.com/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+            <a href="https://github.com/AmitBhramanna011/movie-updated.git" target="_blank"><i class="bi bi-github"></i></a></div>
+            <img src="suggest-flick.png" alt="">
+            <h2>Suggest-Flick</h2>
+            <p>The Movie Recommendation System uses HTML and CSS to make it look good and Flask to handle the behind-the-scenes work. With the help of the OMDB API, it suggests movies personalized to your taste</p>
+        </div>
+        <div class="p1">
+            <div class="view"><a href="https://ab-workss.netlify.app/" target="_blank"><i class="bi bi-eye-fill"></i></a>
+            <a href="https://github.com/AmitBhramanna011/courseX.git" target="_blank"><i class="bi bi-github"></i></a></div>
+            <img src="coursex.png" alt="">
+            <h2>Course-X</h2>
+            <p>Course X Website is a static and responsive webpage designed to showcase information about Course X. Built using HTML and CSS, The static nature ensures fast loading times, while the responsive design to optimize viewing experience across various devices. </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="AB-logo_neww.png">
+    <title>Skills</title>
+
+
+    <style>
+           body {
+            color: rgb(70 163 198);
+            background-color: rgb(5, 8, 22);
+        }
+        .Skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: 88vh;
+            align-items: center;
+        }
+
+        .s1 {
+            padding: 1rem;
+            margin: 20px 0px;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            width: 16rem;
+            border: 3px;
+            border-radius: 20px;
+            background-color:  rgb(21 16 48);
+            transition: transform 0.3s;
+        }
+        .s1:hover {
+    transform: scale(1.1); /* Added for 3D hover effect */
+}
+        #navbarNavAltMarkup.collapse.navbar-collapse{
+            justify-content: flex-end;
+        }
+        .navbar-nav a{
+            color: black;
+            
+        }
+        a.nav-link{
+            margin :10px;
+            padding: 10px;
+            transition: border-bottom 0.5s;
+            color: rgb(170 166 195);
+            border-bottom: 2px solid transparent;
+        }
+        a.nav-link:hover{
+          color: rgb(238, 238, 238);
+            border-bottom: 2px solid rgb(238, 238, 238);   
+           
+        }
+        a.navbar-brand{
+        color:rgb(238, 238, 238);
+        }
+        .navbar-toggler{
+            background-color: rgb(238, 238, 238);
+        }
+       
+    </style>
+</head>
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PORTFOLIO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="/skills">Skills</a>
+              <a class="nav-link" href="/projects">Projects</a>
+              <a class="nav-link" href="/contact">Contact me</a>
+              <a class="nav-link" href="resume.pdf" target="_blank">My resume</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <div class="Skills">
+        <div class="s1">
+          <img src="dsa.png" alt="">
+          <h2> Data structures and algorithms (c++)</h2>
+        </div>
+        <div class="s1">
+          <img src="front.png" alt="">
+           <h2>Frontend development</h2>
+        </div>
+        <div class="s1">
+          
+           <img src="back.png" alt="">
+           <h2>Backend development</h2>
+        </div>
+        <div class="s1">
+          
+           <img src="ml.png" alt="">
+            <h2>Machine learning (python) </h2>
+        </div>
+    </div>
+    
+</body>
+</html>
