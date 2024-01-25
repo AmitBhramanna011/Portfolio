@@ -1,0 +1,62 @@
+.light-mode{
+    color: #023047;
+    background-color: #f5f5f5;
+}
+a.navbar-brand{
+    color: #023047;
+
+}
+.books path , .books circle{
+    fill: #202020;
+  }
+  #pot{
+    fill: #202020;
+  }
+#line1{
+    background-color: #023047;
+}
+#line2{
+    background-color:  #023047;;
+}
+a.nav-link{
+    color:#023047;
+}
+
+a.nav-link span {
+    background-color: #023047;
+}
+a.nav-link:hover{
+    color: #f5f5f5;
+}
+.media ul li a{
+    color: #023047;
+}
+.s1{
+    background-color:#b5bbd3;
+    
+}
+.p1{
+
+    background-color:#b5bbd3; 
+}
+.p1 h2 , .p1 p{
+    color: #023047;
+}
+.box{
+    background-color:#b5bbd3
+}
+.what-i-know{
+    color:#023047 ;
+}
+.what-i-know span{
+    border-color: #023047;
+}
+i{
+    color: #023047;
+}
+a.navbar-brand:hover{
+    color: #202020;
+}
+footer{
+    color: #023047;
+}

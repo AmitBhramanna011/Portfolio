@@ -15,10 +15,17 @@
 
     <style>
         body {
-            color: rgb(70 163 198);
+            color:rgb(211 209 209);
             background-color: rgb(5, 8, 22);
         }
+        .dark-mode-button {
+      cursor: pointer;
+      font-size: 30px;
+    }
 
+    .bi.bi-moon-stars-fill {
+      font-size: 25px;
+    }
         #navbarNavAltMarkup.collapse.navbar-collapse {
             justify-content: flex-end;
         }
@@ -29,19 +36,61 @@
         }
 
         a.nav-link {
-            margin: 10px;
-            padding: 10px;
-            transition: border-bottom 0.5s;
-            color: rgb(170 166 195);
-            border-bottom: 2px solid transparent;
-        }
+        margin: 5px;
+        padding: 5px;
+        color: rgb(170 166 195);
+        font-size: 16px;
+        border: 0.3em solid transparent;
+        border-radius: 16px;
+        /* letter-spacing: 0.5px; */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: 1s;
+        /* padding: 0px 10px; */
+    
+      }
 
-        a.nav-link:hover {
-          color: rgb(238, 238, 238);
+      a.nav-link span {
+        position: absolute;
+        width: 25%;
+        height: 70%;
+        background-color: white;
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+      }
 
-            border-bottom: 2px solid rgb(238, 238, 238);
+      a.nav-link:hover {
 
-        }
+        color: black;
+        /* color: rgb(238, 238, 238); */
+
+      }
+
+      a.nav-link:hover span {
+        transform: translateY(0) scale(2);
+      }
+
+      a.nav-link span:nth-child(1) {
+        --n: 1;
+      }
+
+      a.nav-link span:nth-child(2) {
+        --n: 2;
+      }
+
+      a.nav-link span:nth-child(3) {
+        --n: 3;
+      }
+
+      a.nav-link span:nth-child(4) {
+        --n: 4;
+      }
 
         .projects {
             display: flex;
@@ -67,9 +116,7 @@
             background-color:  rgb(21 16 48);
             transition: transform 0.3s;
         }
-        .p1:hover {
-    transform: scale(1.1); /* Added for 3D hover effect */
-}
+
         .p1 img{
             border: 10px;
     /* margin: 10px 30px; */
@@ -96,11 +143,59 @@
             padding:  0px 10px;
         }
         a.navbar-brand{
+    margin: 0px 20px;
+
         color:rgb(238, 238, 238);
         }
         .navbar-toggler{
             background-color: rgb(238, 238, 238);
         }
+        .p1 {
+    padding: 1rem;
+    margin: 20px 0;
+    height: 63vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 23rem;
+    border: 3px; /* Added 'solid' for the border type */
+    border-radius: 20px;
+    background-color: rgb(21 16 48);
+    transition: transform 0.3s;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-anim 2s ease-out forwards;
+    transition: all 0.5s;
+}
+
+@keyframes slide-in-anim {
+    20% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.4;
+        transform: translateX(0%);
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateX(2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.p1:hover {
+    
+    height: 67vh;
+    width: 24rem;
+}
+a.navbar-brand:hover{
+    color: white;
+    opacity: 0.5;
+}
     </style>
 </head>
 
@@ -109,17 +204,24 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Amit Bhramanna</a>
+            <div class="dark-mode-button"><i class="bi bi-moon-stars-fill"></i></div>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
-                    <a class="nav-link" href="/skills">Skills</a>
-                    <a class="nav-link" href="/projects">Projects</a>
-                    <a class="nav-link" href="/contact">Contact me</a>
-                    <a class="nav-link" href="resume.pdf" target="_blank">My resume</a>
+                    <a class="nav-link" aria-current="page" href="/"
+                    >Home <span></span><span></span><span></span><span></span>
+                  </a>
+                  <a class="nav-link" href="/skills">Skills<span></span><span></span><span></span><span></span></a>
+                
+                  <a class="nav-link" href="/projects">Projects<span></span><span></span><span></span><span></span></a>
+                
+                  <a class="nav-link" href="/contact">Contact me<span></span><span></span><span></span><span></span></a>
+                
+                  <a class="nav-link" href="/resume.pdf" target="_blank">My resume<span></span><span></span><span></span><span></span></a>
                 </div>
             </div>
         </div>
@@ -148,7 +250,6 @@
             <p>Course X Website is a static and responsive webpage designed to showcase information about Course X. Built using HTML and CSS, The static nature ensures fast loading times, while the responsive design to optimize viewing experience across various devices. </p>
         </div>
     </div>
-
 </body>
-
+<script src="js/mode.js"></script>
 </html>
